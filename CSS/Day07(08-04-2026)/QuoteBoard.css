@@ -1,0 +1,99 @@
+/* body gradient */
+/* meaning: warm coffee tone background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4b2e2e, #a67c52);
+    color: #f5f5dc; /* beige text */
+}
+
+
+/* header */
+/* meaning: soft brown top bar */
+header {
+    padding: 15px;
+    background: rgba(65, 40, 40, 0.6);
+}
+
+
+/* flex navigation */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* nav list */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+
+/* nav items */
+nav ul > li {
+    cursor: pointer;
+    color: #f5f5dc; /* beige */
+}
+
+
+/* heading section */
+main > section:first-child {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* quotes container */
+main > section + section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* quote cards */
+/* meaning: beige cards on brown bg */
+section > article {
+    background: #f5f5dc; /* beige */
+    color: #4b2e2e; /* coffee brown text */
+    width: 220px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* quote text */
+article > p {
+    font-size: 14px;
+}
+
+
+/* author name */
+article > span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* hover */
+/* meaning: slight zoom */
+section > article:hover {
+    transform: scale(1.05);
+    background: #e8dcc0; /* darker beige */
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: rgba(75, 46, 46, 0.6);
+}

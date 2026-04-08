@@ -1,0 +1,63 @@
+/* Layout */
+
+
+body {
+    background-color: #cee2f7; /* light grey */
+}
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#header, footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    margin: 20px;
+    flex: 1;
+}
+
+/* Clickable labels */
+input + label {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hide answers */
+section > p {
+    display: none;
+    font-weight: bold;
+}
+
+/* CORRECT */
+#q1a:checked ~ #q1correct,
+#q2b:checked ~ #q2correct,
+#q3b:checked ~ #q3correct,
+#q4c:checked ~ #q4correct {
+    display: inline;
+    background-color: rgb(38, 149, 38);
+}
+
+/* INCORRECT */
+#q1b:checked ~ #q1incorrect,
+#q1c:checked ~ #q1incorrect,
+#q1d:checked ~ #q1incorrect,
+#q2a:checked ~ #q2incorrect,
+#q2c:checked ~ #q2incorrect,
+#q2d:checked ~ #q2incorrect,
+#q3a:checked ~ #q3incorrect,
+#q3c:checked ~ #q3incorrect,
+#q3d:checked ~ #q3incorrect,
+#q4a:checked ~ #q4incorrect,
+#q4b:checked ~ #q4incorrect,
+#q4d:checked ~ #q4incorrect {
+    display: inline;
+    background-color: rgb(172, 12, 12);
+}

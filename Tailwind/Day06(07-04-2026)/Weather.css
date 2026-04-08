@@ -1,0 +1,58 @@
+/* descendant */
+/* meaning: selects elements inside */
+div h1 {
+    letter-spacing: 1px;
+}
+
+
+/* child selector */
+/* meaning: direct child only */
+div > div > section {
+    transition: 0.3s;
+}
+
+
+/* adjacent sibling */
+/* meaning: next element only */
+section + section {
+    border-left: 2px solid #444;
+    padding-left: 10px;
+}
+
+
+/* general sibling */
+/* meaning: all next elements */
+section ~ section {
+    margin-top: 10px;
+}
+
+
+/* nested text */
+/* meaning: inner p elements */
+section div p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* deeper nesting */
+/* meaning: inner heading */
+section div h3 {
+    font-weight: bold;
+}
+
+
+/* hover effect */
+/* meaning: direct child cards */
+section > div > div:hover {
+    transform: scale(1.05);
+}
+
+
+/* span styling */
+/* meaning: inside forecast rows */
+section div span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
