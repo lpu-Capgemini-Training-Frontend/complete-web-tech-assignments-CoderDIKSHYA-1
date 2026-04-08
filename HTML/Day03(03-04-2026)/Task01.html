@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applicant Form</title>
+</head>
+<body>
+
+<h2>Applicant Details</h2>
+
+<form>
+
+First Name: <input type="text"><br><br>
+
+Last Name: <input type="text"><br><br>
+
+Email: <input type="email"><br><br>
+
+Gender:<br>
+Male <input type="radio" name="gender">
+Female <input type="radio" name="gender"><br><br>
+
+Contact: <input type="text"><br><br>
+
+Qualification: <input type="file"><br><br>
+
+Joining Date: <input type="date"><br><br>
+
+<!-- SKILLS -->
+Skills:<br>
+<input type="checkbox"> JavaScript
+<input type="checkbox"> Java<br>
+
+<input type="checkbox"> React
+<input type="checkbox"> Express<br>
+
+<input type="checkbox"> Python
+<input type="checkbox"> SQL<br>
+
+<input type="checkbox"> Hibernate
+<input type="checkbox"> JPA<br>
+
+<input type="checkbox"> JDBC
+<input type="checkbox"> Spring MVC<br>
+
+<input type="checkbox"> Spring Boot
+<input type="checkbox"> Docker<br>
+
+<input type="checkbox"> Microservices
+<input type="checkbox"> Swagger<br>
+
+<input type="checkbox"> Zipkin
+<input type="checkbox"> JUnit<br>
+
+<input type="checkbox"> Mockito<br><br>
+
+<!-- RANGE FIX -->
+Year of Experience:
+<input type="range" min="0" max="10" value="2" style="width:200px;" 
+oninput="exp.value=this.value">
+<span id="exp">2</span> years<br><br>
+
+<!-- LOCATION UPDATED -->
+Work Location:
+<select>
+    <option>Mohali</option>
+    <option>Kolkata</option>
+    <option>Hyderabad</option>
+    <option>Pune</option>
+    <option>Mangalore</option>
+    <option>Noida</option>
+    <option>Delhi</option>
+    <option>Bangalore</option>
+</select><br><br>
+
+Address:<br>
+<textarea rows="3" cols="30"></textarea><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>

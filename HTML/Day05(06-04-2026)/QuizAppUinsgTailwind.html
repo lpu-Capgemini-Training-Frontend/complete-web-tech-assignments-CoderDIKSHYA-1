@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Application</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+
+<body class="bg-[#f5f0e6] flex flex-col min-h-screen font-sans">
+<!--what Tailwind css property is used here ?
+1.flex -it is used to create a flex container that allows for flexible layouts. 
+In this case, it is used to create a column layout for the entire page.
+2.flex-col-it is used to specify that the flex items should be arranged in a column.
+3.min-h-screen-it is used to set the minimum height of the container to the height of the viewport, 
+ensuring that the content takes up at least the full height of the screen.
+4.font-sans-it is used to apply a sans-serif font family to the text within the container.
+5.bg-[#f5f0e6]- This is used to set the background color of the body to a light beige color. -->
+
+<header class="bg-[#6f4e37] text-white text-center p-4 shadow-md">
+<!-- what tailwind css property is used here ?
+1.bg-[#6f4e37]- This is used to set the background color of the header to a dark brown color.
+2.text-white- This is used to set the text color to white.
+3.text-center- This is used to center the text horizontally within the header.
+4.p-4- This is used to apply padding of 1rem (16px) on all sides of the header.
+5.shadow-md- This is used to apply a medium shadow effect to the header, giving it
+a subtle depth and separation from the rest of the content. -->
+    <h1 class="text-xl font-bold">Quiz Application</h1>
+</header>
+
+<main class="flex-1 m-6">
+<section class="space-y-6 text-[#4b2e2e]">
+<!-- what tailwind css property is used here ?
+1.space-y-6- This is used to apply a vertical margin of 1.5 
+rem (24px) between each child element within the section, creating spacing between the quiz questions.
+2.text-[#4b2e2e]- This is used to set the text color to a dark brown color, 
+which provides good contrast against the light background and enhances readability. -->
+
+
+<!-- This is the first question -->
+<div class="bg-[#fffaf3] p-4 rounded-lg shadow">
+<h4 class="font-semibold mb-2">Q1. What is your favorite outfit style?</h4>
+
+<input type="radio" name="q1" id="q1a" class="peer/q1a hidden">
+<label for="q1a" class="ml-2 cursor-pointer">A. Western</label><br>
+
+<input type="radio" name="q1" id="q1b" class="peer/q1b hidden">
+<label for="q1b" class="ml-2 cursor-pointer">B. Traditional</label><br>
+
+<input type="radio" name="q1" id="q1c" class="peer/q1c hidden">
+<label for="q1c" class="ml-2 cursor-pointer">C. Casual</label><br>
+
+<input type="radio" name="q1" id="q1d" class="peer/q1d hidden">
+<label for="q1d" class="ml-2 cursor-pointer">D. Formal</label>
+
+<p class="hidden peer-checked/q1a:inline bg-green-200 text-green-800 px-2 rounded ml-2">Correct!</p>
+<p class="hidden peer-checked/q1b:inline peer-checked/q1c:inline peer-checked/q1d:inline bg-red-200 text-red-800 px-2 rounded ml-2">Incorrect!</p>
+</div>
+
+<!-- This is the second question -->
+<div class="bg-[#fffaf3] p-4 rounded-lg shadow">
+<h4 class="font-semibold mb-2">Q2. What is your favorite makeup item?</h4>
+
+<input type="radio" name="q2" id="q2a" class="peer/q2a hidden">
+<label for="q2a" class="ml-2 cursor-pointer">A. Lipstick</label><br>
+
+<input type="radio" name="q2" id="q2b" class="peer/q2b hidden">
+<label for="q2b" class="ml-2 cursor-pointer">B. Kajal</label><br>
+
+<input type="radio" name="q2" id="q2c" class="peer/q2c hidden">
+<label for="q2c" class="ml-2 cursor-pointer">C. Foundation</label><br>
+
+<input type="radio" name="q2" id="q2d" class="peer/q2d hidden">
+<label for="q2d" class="ml-2 cursor-pointer">D. Mascara</label>
+
+<p class="hidden peer-checked/q2b:inline bg-green-200 text-green-800 px-2 rounded ml-2">Correct!</p>
+<p class="hidden peer-checked/q2a:inline peer-checked/q2c:inline peer-checked/q2d:inline bg-red-200 text-red-800 px-2 rounded ml-2">Incorrect!</p>
+</div>
+
+<!-- This is the third question -->
+<div class="bg-[#fffaf3] p-4 rounded-lg shadow">
+<h4 class="font-semibold mb-2">Q3. What is your favorite shopping place?</h4>
+
+<input type="radio" name="q3" id="q3a" class="peer/q3a hidden">
+<label for="q3a" class="ml-2 cursor-pointer">A. Mall</label><br>
+
+<input type="radio" name="q3" id="q3b" class="peer/q3b hidden">
+<label for="q3b" class="ml-2 cursor-pointer">B. Online</label><br>
+
+<input type="radio" name="q3" id="q3c" class="peer/q3c hidden">
+<label for="q3c" class="ml-2 cursor-pointer">C. Local Market</label><br>
+
+<input type="radio" name="q3" id="q3d" class="peer/q3d hidden">
+<label for="q3d" class="ml-2 cursor-pointer">D. Boutique</label>
+
+<p class="hidden peer-checked/q3b:inline bg-green-200 text-green-800 px-2 rounded ml-2">Correct!</p>
+<p class="hidden peer-checked/q3a:inline peer-checked/q3c:inline peer-checked/q3d:inline bg-red-200 text-red-800 px-2 rounded ml-2">Incorrect!</p>
+</div>
+
+<!-- This is the fourth question -->
+<div class="bg-[#fffaf3] p-4 rounded-lg shadow">
+<h4 class="font-semibold mb-2">Q4. What is your favorite hairstyle?</h4>
+
+<input type="radio" name="q4" id="q4a" class="peer/q4a hidden">
+<label for="q4a" class="ml-2 cursor-pointer">A. Straight</label><br>
+
+<input type="radio" name="q4" id="q4b" class="peer/q4b hidden">
+<label for="q4b" class="ml-2 cursor-pointer">B. Curly</label><br>
+
+<input type="radio" name="q4" id="q4c" class="peer/q4c hidden">
+<label for="q4c" class="ml-2 cursor-pointer">C. Bun</label><br>
+
+<input type="radio" name="q4" id="q4d" class="peer/q4d hidden">
+<label for="q4d" class="ml-2 cursor-pointer">D. Ponytail</label>
+
+<p class="hidden peer-checked/q4c:inline bg-green-200 text-green-800 px-2 rounded ml-2">Correct!</p>
+<p class="hidden peer-checked/q4a:inline peer-checked/q4b:inline peer-checked/q4d:inline bg-red-200 text-red-800 px-2 rounded ml-2">Incorrect!</p>
+</div>
+
+<button class="bg-amber-800 hover:bg-amber-900 text-white px-4 py-2 rounded focus:outline-2 focus:outline-offset-2 focus:outline-amber-700">
+  Save changes
+</button>
+
+<button class="bg-yellow-800 hover:bg-yellow-900 text-white px-4 py-2 rounded focus:outline-2 focus:outline-offset-2 focus:outline-yellow-700">
+  Submit
+</button>
+
+</section>
+</main>
+
+<footer class="bg-[#6f4e37] text-white text-center p-4">
+    <h4>This is the footer</h4>
+</footer>
+
+</body>
+</html>
