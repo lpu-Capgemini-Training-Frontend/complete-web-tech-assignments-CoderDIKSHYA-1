@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML List</title>
+
+    <!-- 
+    =========================
+    UNORDERED LIST NOTES
+    =========================
+
+    🔹 WHAT IS AN UNORDERED LIST?
+    An unordered list (<ul>) is used to display a list of items 
+    where the order does NOT matter.
+
+    ✔ Items are shown with BULLETS instead of numbers
+    ✔ Each item is written using <li> (list item)
+
+    Example:
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    --------------------------------------------------
+
+    🔹 TYPE ATTRIBUTE IN <ul>
+    The "type" attribute changes the style of bullets.
+
+    Types:
+    - disc   → Default filled circle ●
+    - circle → Hollow circle ○
+    - square → Square ■
+    - none   → No bullet
+
+    NOTE:
+    ✔ "disc" is default, so no need to write it
+    ✔ "type" is deprecated in HTML5 → better to use CSS
+
+    Example using CSS:
+    ul {
+        list-style-type: square;
+    }
+
+    --------------------------------------------------
+
+    🔹 WHEN TO USE UNORDERED LIST?
+    - When order is NOT important
+    - Example:
+      • Shopping list
+      • Features
+      • Categories
+
+    -->
+</head>
+
+<body>
+
+    <!-- ================= UNORDERED LIST (SQUARE BULLETS) ================= -->
+    <h4>Unordered List (Square)</h4>
+
+    <!-- type="square" → square shaped bullets -->
+    <ul type="square">
+        <li>Skincare</li>
+        <li>Shoes</li>
+        <li>Phone</li>
+        <li>Clothes</li>
+        <li>Food</li>
+    </ul>
+
+
+    <!-- ================= UNORDERED LIST (CIRCLE BULLETS) ================= -->
+    <h4>Unordered List (Circle)</h4>
+
+    <!-- type="circle" → hollow circular bullets -->
+    <ul type="circle">
+        <li>Skincare</li>
+        <li>Shoes</li>
+        <li>Phone</li>
+        <li>Clothes</li>
+        <li>Food</li>
+    </ul>
+
+
+    <!-- ================= UNORDERED LIST (NO BULLETS) ================= -->
+    <h4>Unordered List (No Bullets)</h4>
+
+    <!-- type="none" → removes bullets -->
+    <ul type="none">
+        <li>Skincare</li>
+        <li>Shoes</li>
+        <li>Phone</li>
+        <li>Clothes</li>
+        <li>Food</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Run</title>
+</head>
+<body>
+
+<script>
+var str = "Java is very good language java javascript java";
+
+var newStr = str.replace(/java/g, "JAVA");
+console.log(newStr);
+
+newStr = str.replace(/java/ig, "Java");
+console.log(newStr);
+
+var pos = str.search(/java/ig);
+console.log(pos);
+
+var text = 'ABCDE12348877';
+var patt = /^[a-z]{5}[0-9]{4}[a-z]$/i;
+
+var valid = patt.test(text);
+console.log(valid); 
+</script>
+
+</body>
+</html>

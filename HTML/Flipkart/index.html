@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipkart Header</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+#parentcontainer{
+    width:100%;
+}
+
+/* HEADER */
+#childcontainer01{
+    width:100%;
+    padding:15px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background:#f5f5f5;
+}
+
+/* TOP ROW */
+#for-adding-logo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LEFT SIDE */
+#leftsection{
+    display:flex;
+    gap:15px;
+}
+
+/* PILLS */
+.pill{
+    padding:8px 18px;
+    border-radius:20px;
+    background:#e0e0e0;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-weight:600;
+}
+
+/* INDIVIDUAL (keeping your IDs) */
+#flipkartlogo{
+    background:#ffe500;
+}
+
+#travellogo{
+    background:#e0e0e0;
+}
+
+/* LOCATION */
+#location{
+    font-size:14px;
+}
+
+/* SEARCH + RIGHT MENU */
+#searchcontainer{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* SEARCH BAR */
+#searchbar{
+    flex:1;
+    padding:12px 20px;
+    border-radius:10px;
+    border:2px solid #2874f0;
+    outline:none;
+    font-size:16px;
+}
+
+/* RIGHT MENU */
+#rightmenu{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.item{
+    font-size:14px;
+}
+
+/* EMPTY LOWER (optional keep) */
+#childcontainer02{
+    height:300px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="parentcontainer">
+
+    <div id="childcontainer01">
+
+        <!-- TOP -->
+        <div id="for-adding-logo">
+
+            <div id="leftsection">
+                <div id="flipkartlogo" class="pill">Flipkart</div>
+                <div class="pill">Minutes</div>
+                <div id="travellogo" class="pill">Travel</div>
+                <div class="pill">Grocery</div>
+            </div>
+
+            <div id="location">
+                📍 500004 <span style="color:blue;">Select delivery location</span>
+            </div>
+
+        </div>
+
+        <!-- SEARCH ROW -->
+        <div id="searchcontainer">
+
+            <input id="searchbar" placeholder="Search for Products, Brands and More">
+
+            <div id="rightmenu">
+                <div class="item">👤 DIKSHYA</div>
+                <div class="item">More ⌄</div>
+                <div class="item">🛒 Cart</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="childcontainer02"></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* descendant selector */
+/* selects all li inside ul inside section */
+/* meaning: affects all nested list items */
+section ul li {
+    color: rgb(25, 25, 191);
+}
+
+
+/* child selector (>) */
+/* selects direct h1 inside section */
+/* meaning: only immediate child is selected */
+section > h1 {
+    color: rgb(203, 59, 59);
+    text-align: center;
+}
+
+
+/* adjacent sibling selector (+) */
+/* selects ul just after h1 */
+/* meaning: only next element gets style */
+h1 + ul {
+    background-color: rgb(196, 235, 248);
+    padding: 10px;
+}
+
+
+/* general sibling selector (~) */
+/* selects all ol after h1 */
+/* meaning: applies to multiple following elements */
+h1 ~ ol {
+    background-color: rgb(248, 248, 178);
+    padding: 10px;
+}
+
+
+/* child combinator for nested list */
+/* meaning: only direct nested ul items */
+li > ul > li {
+    color: green;
+}
+
+
+/* descendant again for deeper nesting */
+/* meaning: targets inner list items */
+section ul li ul li {
+    font-style: italic;
+}

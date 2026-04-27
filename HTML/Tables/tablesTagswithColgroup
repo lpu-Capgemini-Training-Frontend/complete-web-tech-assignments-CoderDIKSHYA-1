@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables and Table Tags</title>
+
+    <!-- 
+    =========================
+    HTML TABLES NOTES
+    =========================
+
+    🔹 TABLE
+    → A table is used to display structured data in the form of rows and columns.
+
+    🔹 BASIC STRUCTURE
+    → A table consists of rows (<tr>) containing header (<th>) or data (<td>) cells.
+
+    🔹 IMPORTANT TAGS
+
+    - <table> → Defines the main container that holds the entire table structure.
+    - <tr> → Represents a single horizontal row that contains multiple cells.
+    - <th> → Defines a header cell that is bold and centered by default.
+    - <td> → Defines a standard data cell that holds actual content.
+    - <caption> → Provides a title or description for the table and appears above it.
+
+    🔹 GROUPING TAGS
+
+    - <thead> → Groups the header content of the table for better structure and readability.
+    - <tbody> → Contains the main data rows of the table.
+    - <tfoot> → Defines the footer section used for summary or final information.
+
+    🔹 ATTRIBUTES
+
+    - border → Specifies the thickness of the border around the table and cells.
+    - cellpadding → Adds space inside each table cell between content and border.
+    - cellspacing → Adds space between adjacent table cells.
+    - colspan → Merges two or more columns into a single cell.
+    - rowspan → Merges two or more rows into a single cell.
+
+ 
+    🔹 <colgroup>
+    → Used to group one or more columns and apply styling like color to entire columns.
+
+    🔹 <col>
+    → Defines individual columns inside <colgroup> and allows applying styles to them.
+    -->
+
+      
+</head>
+
+<body>
+
+    <h4>HTML Tables and Table Tags</h4>
+
+    <!-- TABLE START: This defines the beginning of the table structure -->
+    <table border="3" cellpadding="10" cellspacing="5" align="center">
+
+        <!-- CAPTION: This provides a title that describes the table -->
+        <caption>Student Details</caption>
+          <colgroup>
+            <col style="background-color: lightblue;">   <!-- Column 1 -->
+            <col style="background-color: lightpink;">   <!-- Column 2 -->
+            <col style="background-color: lightyellow;"> <!-- Column 3 -->
+        </colgroup>
+
+        <!-- HEADER: This section contains column headings of the table -->
+        <thead>
+            <tr>
+                <th>Serial Number</th>
+                <th>Name</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+
+        <!-- BODY: This section contains the main data entries of the table -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dikshya</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sanjana</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td colspan="2">Unavailable</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td colspan="2">Unavailable</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Khusagra</td>
+                <td>005</td>
+            </tr>
+        </tbody>
+
+        <!-- FOOTER: This section provides summary or final information -->
+        <tfoot>
+            <tr>
+                <td colspan="3">Feedback: Good</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>

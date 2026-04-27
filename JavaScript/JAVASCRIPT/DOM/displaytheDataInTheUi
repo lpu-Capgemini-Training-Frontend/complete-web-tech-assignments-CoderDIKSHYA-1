@@ -1,0 +1,22 @@
+
+
+
+async function fetchData(){
+    console.log(data);
+}
+
+
+for(let i=0;i<data.length;i++){
+    let tr01 = document.createElement("tr");
+tr01.innerHTML =`
+<td>${data[i].id}</td>
+<td>${data[i].title}</td>
+<td>${data[i].price}</td>
+<td>${data[i].slug}</td>
+<td>${data[i].description}</td>`
+table.append(tr01);
+}
+
+}
+fetchData();
+

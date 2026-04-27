@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Attributes Demo</title>
+
+    <!-- 
+    =========================
+    HTML ATTRIBUTES - DETAILED NOTES
+    =========================
+
+    🔹 WHAT ARE ATTRIBUTES?
+    Attributes are special properties used to provide 
+    additional information about HTML elements.
+
+    ✔ They are always written in the opening tag
+    ✔ Written in name="value" format
+    ✔ They modify behavior, appearance, or functionality
+
+    Example:
+    <a href="https://google.com">Link</a>
+
+    --------------------------------------------------
+
+    🔹 TYPES OF ATTRIBUTES
+
+    1. GLOBAL ATTRIBUTES
+    → Can be used on ANY HTML element
+
+    Common Global Attributes:
+    - id → Unique identifier (used in CSS/JS)
+    - class → Groups elements for styling
+    - style → Adds inline CSS
+    - title → Shows tooltip on hover
+    - tabindex → Controls keyboard navigation order
+    - contenteditable → Makes content editable
+    - draggable → Enables drag & drop
+    - hidden → Hides element from display
+
+    --------------------------------------------------
+
+    2. CORE ATTRIBUTES (subset of global attributes)
+    → Most commonly used attributes
+
+    - id
+    - class
+    - style
+    - title
+
+    --------------------------------------------------
+
+    3. ELEMENT-SPECIFIC ATTRIBUTES
+    → Work only with specific HTML elements
+
+    Examples:
+    - <img> → src, alt, width
+    - <a> → href, target
+    - <input> → type, placeholder
+
+    --------------------------------------------------
+
+    4. INTERNATIONALIZATION ATTRIBUTES
+    → Used for language and text direction
+
+    - lang → Defines language (en, ar, hi)
+    - dir → Text direction (ltr = left-to-right, rtl = right-to-left)
+
+    --------------------------------------------------
+
+    5. CUSTOM ATTRIBUTES (data-*)
+    → User-defined attributes
+
+    - Must start with "data-"
+    - Used to store extra data
+    - Accessed using JavaScript (dataset)
+
+    Example:
+    data-user-id="101"
+
+    --------------------------------------------------
+
+    6. EVENT ATTRIBUTES
+    → Used to handle user interactions
+
+    Examples:
+    - onclick
+    - ondrop
+    - ondragover
+
+    --------------------------------------------------
+
+    ⚠ IMPORTANT NOTE:
+    Not all attributes are valid for all elements.
+    Some attributes are strictly element-specific.
+
+    -->
+</head>
+
+<body>
+
+    <!-- ================= GLOBAL ATTRIBUTES EXAMPLE ================= -->
+
+    <!-- id → unique identification -->
+    <!-- class → grouping -->
+    <!-- style → inline styling -->
+    <!-- title → tooltip -->
+    <h1 id="mainHeading" class="heading" style="color: blue;" title="This is a heading">
+        Global Attributes Example
+    </h1>
+
+    <!-- tabindex → controls tab key navigation order -->
+    <button tabindex="1">First Button</button>
+    <button tabindex="2">Second Button</button>
+
+    <!-- contenteditable → allows user to edit content -->
+    <p contenteditable="true">
+        You can edit this text directly!
+    </p>
+
+    <!-- draggable → enables drag functionality -->
+    <div draggable="true" style="border:1px solid black; width:150px;">
+        Drag me
+    </div>
+
+    <!-- hidden → element is not displayed -->
+    <p hidden>This text is hidden</p>
+
+
+    <!-- ================= CORE ATTRIBUTE ================= -->
+    <!-- Basic commonly used attributes -->
+    <p id="para1" class="text" style="color: green;" title="Core attribute example">
+        This is a core attribute example
+    </p>
+
+
+    <!-- ================= ELEMENT-SPECIFIC ATTRIBUTES ================= -->
+
+    <!-- img attributes -->
+    <!-- src → image source -->
+    <!-- alt → alternative text if image fails -->
+    <!-- width → sets width -->
+    <img src="image.jpg" alt="Sample Image" width="200">
+
+    <!-- anchor attributes -->
+    <!-- href → destination link -->
+    <!-- target="_blank" → opens in new tab -->
+    <a href="https://www.google.com" target="_blank">
+        Go to Google
+    </a>
+
+    <!-- input attributes -->
+    <!-- type → input type -->
+    <!-- placeholder → hint text -->
+    <input type="text" placeholder="Enter your name">
+
+
+    <!-- ================= INTERNATIONALIZATION ================= -->
+
+    <!-- lang → defines language -->
+    <p lang="en">This is English text</p>
+
+    <!-- dir="rtl" → right to left (Arabic, Urdu etc.) -->
+    <p lang="ar" dir="rtl">هذا نص عربي</p>
+
+
+    <!-- ================= CUSTOM ATTRIBUTE ================= -->
+
+    <!-- data-* → custom data storage -->
+    <div data-user-id="101" data-role="admin">
+        Custom Attribute Example
+    </div>
+
+    <script>
+        // Accessing custom attribute using dataset
+        let user = document.querySelector('div[data-user-id]');
+        console.log(user.dataset.userId); // Output: 101
+    </script>
+
+
+    <!-- ================= EVENT + DRAG & DROP ================= -->
+
+    <!-- ondragover → allows dropping -->
+    <!-- ondrop → handles drop action -->
+    <div 
+        ondrop="dropHandler(event)" 
+        ondragover="allowDrop(event)" 
+        style="width:200px; height:100px; border:2px dashed black;">
+        Drop here
+    </div>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault(); // Required to allow drop
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            alert("Item dropped!");
+        }
+    </script>
+
+</body>
+</html>

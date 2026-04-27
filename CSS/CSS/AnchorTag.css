@@ -1,0 +1,17 @@
+#example > #first {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#example > #second {
+    background-color: lightgreen;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#example > #third {
+    background-color: lightcoral;
+    padding: 20px;
+    margin-bottom: 20px;
+}

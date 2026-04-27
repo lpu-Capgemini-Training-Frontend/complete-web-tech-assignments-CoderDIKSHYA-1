@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Selectors</title>
+    <link rel="stylesheet" href="/CSS/simpleSelector.css"> <!-- External CSS -->
+</head>
+
+<body>
+
+    <h4>Simple CSS Selectors</h4>
+    
+    <p id="para1">This is a paragraph styled with external CSS.</p>   
+    <p id="para2">This is another paragraph styled with external CSS.</p>
+    <p id="para3">This is yet another paragraph styled with external CSS.</p> 
+
+    
+   <article class="samearticle">This is an article styled with external CSS.</article>
+   <article class="samearticle">This is another article styled differently.</article>
+   <article class="samearticle">This is yet another article with unique styling.</article>
+   <br>
+   <br>
+
+    <article id="article1" class="lastarticle">This is an article with both id and class selectors.</article> 
+    <article id="article2" class="lastarticle">This is another article with both id and class selectors.</article>
+    <article id="article3" class="lastarticle">This is yet another article with both id and class selectors.</article>
+
+   
+     
+</body>
+</html>
+
+
+    <!--
+    =========================
+    CSS SELECTORS NOTES
+    =========================
+
+    🔹 WHAT IS A CSS SELECTOR?
+    A CSS selector is a pattern used to select the HTML elements you want to style.
+
+    --------------------------------------------------
+
+    🔹 TYPES OF CSS SELECTORS:
+    1. Simple Selectors: Target elements based on their name, id, class, type, attributes, etc.
+    Tag selectors target elements based on their tag name (e.g., p, h1, div).
+    ID selectors target a specific element with a unique id (e.g., #myId).
+       Examples: 
+       - id selector: #myId { color: red; }
+       - class selector: .myClass { color: blue; }
+       class selectors target elements based on their class attribute (e.g., .myClass).
+         Examples:
+         - class selector: .myClass { color: blue; } 
+
+
+         Notes: if we are using id and class selector together then id selector will override the class selector because 
+         id selector has higher specificity than class selector.
+
+         Tag selectors target elements based on their tag name (e.g., p, h1, div).
+        the tag selector will have the lowest specificity 
+        among the three selectors (id,class,tag) and will be overridden by both id and class selectors if they target the same element.
+
+
+       - universal selector: * { color: green; }
+       * The universal selector (*) targets all elements on the page and applies the specified styles to them.
+
+
+       - grouping selector: h1, h2, h3 { color: purple; }
+       - pseudo-class selector: a:hover { color: orange; }
+       - pseudo-element selector: p::first-line { color: pink; }
+
+    2. Combinator Selectors: Target elements based on their relationship with other elements (e.g., descendant, child, adjacent sibling, general sibling).
+       Examples:
+       - descendant combinator: div p { color: brown; }
+       - child combinator: ul > li { color: cyan; }
+       - adjacent sibling combinator: h1 + p { color: magenta; }
+       - general sibling combinator: h1 ~ p { color: teal; }
+
+    3. Attribute Selectors: Target elements based on the presence or value of an attribute.
+       Examples:
+       - [type="text"] { color: navy; }
+       - [href^="https"] { color: maroon; }
+
+    4. Pseudo-class and Pseudo-element Selectors: Target elements in a specific state or part of an element.
+       Examples:
+       - :hover (pseudo-class) targets an element when it is being hovered over by the mouse.
+       - ::first-line (pseudo-element) targets the first line of a block-level element.
+
+    --------------------------------------------------
+
+    🔹 WHY USE CSS SELECTORS?
+    - To apply styles to specific elements without affecting others.
+    - To create more efficient and maintainable stylesheets.
+
+
+    -->
+    

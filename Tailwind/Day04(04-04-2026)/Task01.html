@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinators Example</title>
+
+    <style>
+        /* Descendant selector */
+        ul li {
+            color: blue;
+        }
+
+        /* Child selector */
+        ul > li {
+            font-weight: bold;
+        }
+
+        /* Adjacent sibling selector */
+        h2 + ul {
+            background-color: lightyellow;
+        }
+
+        /* General sibling selector */
+        h2 ~ ul {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Ingredients for Biryani</h1>
+
+<ul>
+    <li>Rice</li>
+    <li>Chicken
+        <ul>
+            <li>Fried</li>
+            <li>Grilled</li>
+            <li>Roasted</li>
+        </ul>
+    </li>
+    <li>Paneer</li>
+</ul>
+
+<h2>Fighter Jet</h2>
+
+<ul>
+    <li>Spices</li>
+    <li>Gas/Electric</li>
+</ul>
+
+<h2>Ingredients for Lassi</h2>
+
+<ul>
+    <li>Curd</li>
+    <li>Water</li>
+    <li>Sugar
+        <ul>
+            <li>White Sugar</li>
+            <li>Brown Sugar</li>
+        </ul>
+    </li>
+    <li>Malai</li>
+    <li>Kova</li>
+</ul>
+
+</body>
+</html>

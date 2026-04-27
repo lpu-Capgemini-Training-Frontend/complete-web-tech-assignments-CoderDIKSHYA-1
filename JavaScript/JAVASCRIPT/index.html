@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java script session</title>
+</head>
+
+<body>
+
+<!--way01 by using internal java script-->
+<!-- JavaScript is a versatile programming language that is commonly used for web development. 
+ /*-It allows developers to create interactive and dynamic web pages by manipulating the Document Object Model (DOM) and handling events.
+ JavaScript can be used for both client-side and server-side development, making it a powerful tool for building web applications. 
+ It supports various programming paradigms, including object-oriented, functional, and procedural programming. 
+JavaScript is also widely supported by web browsers, making it an essential language for front-end development. 
+Advantages of JavaScript:
+1. Versatility: JavaScript can be used for both client-side and server-side development,
+    allowing developers to build full-stack applications using a single language.
+2. Interactivity: JavaScript enables developers to create interactive web pages by manipulating the DOM and handling events,
+    enhancing user experience.
+3. Large Ecosystem: JavaScript has a vast ecosystem of libraries and frameworks (e.g., React, Angular, Vue.js) that can speed up development and provide additional functionality.
+4. Asynchronous Programming: JavaScript supports asynchronous programming through callbacks, promises, and async/   
+await, allowing for efficient handling of tasks that may take time to complete (e.g., API calls).
+5. Community Support: JavaScript has a large and active community, providing extensive resources, tutorials, and support for developers of all skill levels.
+Disadvantages of JavaScript:    
+1. Browser Compatibility: Different browsers may interpret JavaScript code differently, 
+leading to compatibility issues that developers need to address.
+2. Security Vulnerabilities: JavaScript can be exploited for malicious purposes 
+(e.g., cross-site scripting attacks), so developers need to be cautious and implement security best practices.
+3. Performance: JavaScript can be slower than other programming languages, 
+especially for computationally intensive tasks, which may impact the performance of web applications.
+4. Dynamic Typing: JavaScript's dynamic typing can lead to unexpected behavior and bugs 
+if developers are not careful with variable types and data structures.
+5. Learning Curve: While JavaScript is relatively easy to learn for beginners,
+ mastering its nuances and advanced features can take time and effort, especially for those new to programming. 
+ 
+How can we embed JavaScript in HTML?
+1. Inline JavaScript: You can include JavaScript code directly within an HTML element using the "onclick", "onload", or other event attributes.
+Example:
+<button onclick="alert('Hello, World!')">Click me</button>
+2. Internal JavaScript: You can place JavaScript code within a <script> tag in the head or body of your HTML document.
+Example:
+<script>
+  function greet() {
+    alert('Hello, World!');
+  }
+</script>
+<button onclick="greet()">Click me</button>
+3. External JavaScript: You can link to an external JavaScript file using the <script> tag with the "src" attribute.
+Example:
+<script src="script.js"></script>
+In this case, the JavaScript code would be placed in a separate file named "script.js".
+
+
+    
+<script>
+
+document.write("Hyy, ");
+</script>        
+
+<!--Embedded External java script--> files
+<script src="./hyy.js"></script>
+
+</body>
+</html>
+<!-- is javascript object oriented or functional programming language?
+JavaScript is a multi-paradigm programming language that supports both object-oriented and functional programming styles.
+In object-oriented programming (OOP), JavaScript allows developers to create objects, define classes, and use inheritance to
+ organize code and model real-world entities. JavaScript's prototypal inheritance allows for flexible object creation and manipulation.
+ Features of Javascript?
+ 1. Dynamic Typing: JavaScript is a dynamically typed language, which means that variable types are 
+ determined at runtime and can change during execution.
+ 2. First-Class Functions: In JavaScript, functions are first-class citizens, meaning they can be
+  assigned to variables, passed as arguments to other functions, and returned from functions.
+ 3. Closures: JavaScript supports closures, which allow functions to access variables from their 
+ outer scope even after the outer function has finished executing.
+ 4. Prototype-Based Inheritance: JavaScript uses a prototype-based inheritance model, where objects
+  inherit properties and methods from other objects.
+ 5. Event-Driven Programming: JavaScript is well-suited for event-driven programming, making it ideal
+  for creating interactive web applications that respond to user actions and other events.
+  6. Asynchronous Programming: JavaScript supports asynchronous programming through callbacks, promises,
+  and async/await, allowing developers to handle tasks that may take time to complete without blocking the main thread.  
+
+what is a interpreter?
+An interpreter is a type of computer program that executes instructions written in a programming language directly, without
+first compiling them into machine code. It reads the source code line by line, translates it into an intermediate representation,
+and executes it immediately. Interpreters are commonly used for scripting languages like JavaScript, Python, and Ruby,
+allowing developers to write and test code quickly without the need for a separate compilation step.
+
+Why javascript is  an interpreted language?
+JavaScript is considered an interpreted language because it is executed directly by the web browser's JavaScript
+engine without the need for a separate compilation step. When a web page containing JavaScript code is loaded,
+ the browser's JavaScript engine reads the code, translates it into an intermediate representation, and executes it immediately. 
+ This allows developers to write and test JavaScript code quickly, making it ideal for web development and interactive applications.
+
+ 

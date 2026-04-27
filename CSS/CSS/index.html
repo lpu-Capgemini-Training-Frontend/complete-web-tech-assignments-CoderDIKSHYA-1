@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ways to add css in HTML page</title>
+</head>
+<style>
+    /* Internal CSS */
+    h1 {
+        background-color: green; !important; /* This will override any other background-color styles applied to h1 */
+        color: white; !important; /* This will override any other color styles applied to h1 */
+    }
+</style>
+<link rel="stylesheet" href="./style.css"> <!-- External CSS -->
+<!-- The external CSS file (style.css) will apply styles to the <p> element,
+ setting its background color to yellow and text color to blue.
+ href full form is hyperlink reference means the location of the external CSS file 
+ link rel="stylesheet"  is the tag used to link an external CSS file 
+ what is rel in link tag?
+ The rel attribute in the <link> tag specifies the relationship between the current document and the linked resource.
+ In the context of linking an external CSS file, the rel attribute is set to "stylesheet" 
+ to indicate that the linked resource is a stylesheet that should be applied to the document.
+ ./ and ../ are used to specify the relative path to the external CSS file
+ disadvantage of not using ./ is that the browser may not be able to locate the file correctly
+ ./ is the current directory and ../ is the parent directory or the previous directory -->
+
+<body>
+<!--
+    =========================
+    CSS NOTES
+    =========================
+
+    🔹 CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML.
+
+    🔹 Ways to add CSS in an HTML page:
+    1. Inline CSS: Using the style attribute directly on an HTML element.
+       Example: <p style="color: red;">This is a red paragraph.</p>
+       Why using !important in CSS?
+       The !important declaration in CSS is used to give a CSS property the highest priority, overriding any other declarations 
+       for that property, regardless of specificity or source order. 
+       It is typically used to ensure that a particular style is applied even 
+       if there are conflicting styles elsewhere in the stylesheet or inline styles.
+        However, it should be used sparingly, as it can make debugging and maintaining CSS more difficult.
+
+
+    2. Internal CSS: Using a <style> tag within the <head> section of the HTML document.
+       Example:
+       selector {
+           propertyName: value;
+           propertyName: value;
+       }
+       <style>
+           p {
+               color: blue;
+           }
+       </style>
+
+    3. External CSS: Linking to an external stylesheet using the <link> tag in the <head> section.
+    why external css is recommended?
+    External CSS is recommended for several reasons:
+1. Separation of Concerns: External CSS allows you to separate the presentation (styling) from the content (HTML), 
+making it easier to maintain and update your website.
+2. Reusability: An external CSS file can be linked to multiple HTML documents,
+ allowing you to apply the same styles across multiple pages without having to duplicate the CSS code.
+3. Faster Load Times: Browsers can cache external CSS files, which can improve
+ load times for subsequent visits to the website, as the CSS file will not need to be downloaded again.
+4. Better Organization: Keeping CSS in a separate file helps keep your HTML
+ cleaner and more organized, making it easier to read and understand the structure of your HTML document.    
+       Example:
+       <link rel="stylesheet" href="styles.css">
+
+    🔹 CSS allows you to control the layout, colors, fonts, and overall appearance of your web pages, making them more visually 
+    appealing and user-friendly.
+
+    So basically if we have multiple CSS files  and we dont want to add  link for each CSS files then in one single style.css we 
+    add @import url('style1.css'); and  link only style.css in our html file and it will import all the styles from style1.css
+     into style.css and apply to our html file.
+    import url is used to import an external CSS file into another CSS file.
+     This allows you to modularize your CSS and keep your styles organized across multiple files.
+
+
+     if we are styling a particular element and each css file has a different style for same element exmaple
+     @import urls("./class.css");
+    @import urls("./id.css");
+    and those urls are written inside style.css  then first the styling will be line by line the styles in class and id will
+     be applied for that element which is also there in style.css and then the styles in class.css and id.css will be applied 
+     for that element and if there is any conflict between the styles in class.css and id.css then the styles in id.css 
+     will be applied for that element because id has more priority than class in CSS specificity.
+
+
+     Difference between style attribute and style tag in HTML:
+1. Style Attribute: The style attribute is used to apply inline CSS directly to an HTML element
+Example: <p style="color: red;">This is a red paragraph.</p>
+The style attribute is added to the opening tag of an HTML element and contains CSS properties and values
+    that apply only to that specific element. 
+    It has the highest priority in CSS and will override any other styles defined 
+    in internal or external stylesheets for that element.
+2. Style Tag: The style tag is used to define internal CSS within the <head> section of an HTML document
+Example:
+<style>
+    p {
+        color: blue;
+    }
+</style>
+The style tag allows you to write CSS rules that can be applied to multiple elements within the HTML
+
+  
+    -->
+<h2 title="css" style="background-color: pink; color: black;">Way 01 - Inline CSS(High Priority)</h2>
+<h1 title="css" style="background-color: pink; color: black;">Way 02 - Internal CSS(Less Priority)</h1>
+<!-- Inline CSS 
+background-color is used to set the background color of an element, while color is used to set the text color. 
+In this example, the background color of the heading is pink, and the text color is black.
+-->
+<p> Today is Saturday. </p>
+
+</body>
+</html>
+
+<!--
+Priority of CSS:
+1. Inline CSS (Highest Priority)
+2. Internal CSS (Less Priority)
+3. External CSS (Lowest Priority)
+Why this is the priority order?
+The priority order of CSS is determined by the specificity of the selectors and the source of the styles.
+1. Inline CSS has the highest priority because it is applied directly to the HTML element using the style attribute. 
+It overrides any other styles defined in internal or external stylesheets.
+2. Internal CSS has less priority than inline CSS because it is defined within a <style> tag in the <head> section of the HTML document. 
+It can be overridden by inline styles but will override external styles.
+3. External CSS has the lowest priority because it is defined in a separate stylesheet and linked to the HTML document.
+ It can be overridden by both inline and internal styles.
+This priority order allows developers to have more control over the styling of their web pages,
+ giving them the ability to override styles when necessary while maintaining a clear structure for their CSS.
+ 
+
+ Does the sequence of CSS matter?
+ Yes, the sequence of CSS does matter because it determines which styles are applied to an element when
+    there are conflicting styles. The browser applies styles in the order they are defined, with later styles taking precedence over earlier ones.
+    but  my sir is saying the one whic is more close to the body tag will have more priority than the one which is far from the body tag.
+    This is not entirely accurate. The priority of CSS is determined by the specificity of the selectors and the source of the styles (inline, internal, external), rather than the proximity to the body tag.
+    However, it is true that inline styles (which are applied directly to an element) will generally have higher priority than styles defined in internal or external stylesheets, regardless of their proximity to the body tag.
+    -
+-->

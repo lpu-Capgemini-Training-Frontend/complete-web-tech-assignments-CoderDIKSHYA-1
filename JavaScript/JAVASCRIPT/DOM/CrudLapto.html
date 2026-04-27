@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node Manipulation</title>
+</head>
+<body>
+<style>
+.liked{
+    background-color: green;
+    color: white;
+}
+
+.disliked{
+    background-color: red;
+}
+
+.heading{
+    text-align: center;
+}
+
+
+</style>
+<script>
+
+var obj = {
+    name: "Dikshya runuwal",
+    age: 22,
+    city: "Jaipur",
+    state: "Rajasthan",
+    phone: 1234567890,
+    email: "dikshya@.com"
+};
+
+// Object methods - means to perform operations on the object data type in javascript 
+var keys = Object.keys(obj); // means to get the keys of the object
+for(let key of keys){ // means to loop through the keys
+    console.log(key + " : " + obj[key]); // means to print the key and value
+}
+
+var ar = Object.entries(obj); // means to convert the object into an array
+for (let item of ar){ // means to loop through the array
+    console.log(item[0] + " : " + item[1], item); // means to print the key and value
+}
+
+for(let key in obj){ // means to loop through the object
+    console.log('key: ' + key); // means to print the key
+}
+
+var laptops = [
+    {id:1,name:"Dell",price:20000,ram:8,storage:500 ,screen : 15},
+    {id:2,name:"Lenovo",price:30000,ram:8,storage:500, screen : 23},// added since you had it
+    {id:3,name:"HP",price:40000,ram:8,storage:500, screen : 16},
+    {id:4,name:"Asus",price:50000,ram:8,storage:500, screen : 17}
+];
+
+var fruits = ["apple","mango","banana","grapes"];
+
+</script>
+
+<h2 onclick="method()">Populate Fruits using method1</h2>
+<h2 onclick="method2()">Populate Fruits using method2</h2>
+<select name="fruits" id="fruits"></select>
+
+<br><br>
+
+<h2 class="heading" onclick="tableMethod()">Show Laptop Table</h2>
+
+<table id="table" border="1" bgcolor="lightpink" cellspacing="0" cellpadding="10" width="100%">
+<thead>
+<tr>
+<td>Id</td>
+<td>Name</td>
+<td>Price</td>
+<td>RAM</td>
+<td>Storage</td>
+<td>Screen</td> <!-- added since you had it -->
+<td>Like</td>
+<td>Dislike</td>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+
+var el = document.getElementById("fruits");
+var tableBody = document.querySelector("tbody");
+
+// REMOVED extra "function" keyword error
+
+function method(){
+    var str = "";
+    for(let fruit of fruits){
+        str += `<option>${fruit}</option>`;
+    }
+    el.innerHTML = str;
+}
+
+function method2(){
+    el.innerHTML = ""; 
+    for(let fruit of fruits){
+        let opt = document.createElement("option");
+        opt.innerHTML = fruit;
+        el.appendChild(opt);
+    }
+}
+
+function tableMethod(){
+    tableBody.innerHTML = "";
+
+    for(let lap of laptops){
+        let row = document.createElement("tr");
+
+        let c1 = document.createElement("td");
+        c1.innerHTML = lap.id;
+
+        let c2 = document.createElement("td");
+        c2.innerHTML = lap.name;
+
+        let c3 = document.createElement("td");
+        c3.innerHTML = lap.price;
+
+        let c4 = document.createElement("td");
+        c4.innerHTML = lap.ram;
+
+        let c5 = document.createElement("td");
+        c5.innerHTML = lap.storage;
+
+        let c6 = document.createElement("td");  
+        c6.innerHTML = lap.screen;
+
+       let likeTd = document.createElement("td");
+       let dislikeTd = document.createElement("td");
+
+       let likeBtn = document.createElement("button");
+       likeBtn.innerHTML = "👍Like";
+
+       let dislikeBtn = document.createElement("button");
+       dislikeBtn.innerHTML = "👎Dislike";
+
+       likeBtn.onclick = function(){
+
+       let row = this.closest("tr");
+
+        row.classList.remove("disliked");  
+        row.classList.add("liked");         
+
+       };
+
+// DISLIKE
+       dislikeBtn.onclick = function(){
+
+       let row = this.closest("tr");
+
+       row.classList.remove("liked");     
+       row.classList.add("disliked");      
+
+       };
+
+   likeTd.appendChild(likeBtn);
+   dislikeTd.appendChild(dislikeBtn);
+
+
+row.appendChild(c1);
+row.appendChild(c2);
+row.appendChild(c3);
+row.appendChild(c4);
+row.appendChild(c5);
+row.appendChild(c6);
+row.appendChild(likeTd);
+row.appendChild(dislikeTd);
+
+tableBody.appendChild(row);
+    }
+}
+
+</script>
+
+</body>
+</html>

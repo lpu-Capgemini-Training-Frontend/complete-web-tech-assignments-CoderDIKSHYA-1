@@ -1,0 +1,28 @@
+<h2>Add Training Details Here</h2>
+
+<form #form="ngForm" (ngSubmit)="save(form)">
+
+  <input name="title" [(ngModel)]="formData.t" required placeholder="Title"><br>
+
+  <input name="topic" [(ngModel)]="formData.tp" required placeholder="Topic"><br>
+
+  <input name="max" [(ngModel)]="formData.m" required type="number" placeholder="Max"><br>
+
+  <input name="startDate" [(ngModel)]="formData.sd" required type="date"><br>
+
+  <input name="endDate" [(ngModel)]="formData.ed" required type="date"><br>
+
+  <input name="trainer" [(ngModel)]="formData.tr" required placeholder="Trainer"><br>
+
+  <input name="venue" [(ngModel)]="formData.v" required placeholder="Venue"><br>
+
+  <div *ngIf="formData.sd && formData.ed && formData.sd > formData.ed">
+    End date should be after start date
+  </div>
+
+  <button type="submit"
+    [disabled]="!form.valid || (formData.sd && formData.ed && formData.sd > formData.ed)">
+    Add Training
+  </button>
+
+</form>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Property in CSS</title>
+</head>
+<body>
+
+<h1>Text Property in CSS</h1>
+
+<!-- Text property is used to set the text color, font, size, and other text-related properties. -->
+<!--Text Property(color) is used to set the color of the text we are writing  -->
+
+<p style="color: #ffffff;">This is white colored text.</p>
+<p style="color: #000000;">This is black colored text.</p>
+<p style="color: red;">This is red colored text.</p>
+<p style="color: rgb(0, 0, 255);">This is blue colored text.</p>
+<p style="color: rgba(255, 0, 0, 0.5);">This is semi-transparent red text (RGBA).</p>
+
+<!-- text-transform property is used to control the capitalization of text. It can be set to uppercase, lowercase, or capitalize. -->
+<p style="text-transform: uppercase;">This text is transformed to uppercase.(Today is a beautiful day!)</p>
+<p style="text-transform: lowercase;">THIS TEXT IS TRANSFORMED TO LOWERCASE.(Today is a beautiful day!)</p>
+<p style="text-transform: capitalize;">this text is transformed to capitalize.(Today is a beautiful day!)</p>  
+
+<!--<>Text decoration is used to set the decoration of the text. It can be set to underline,
+ overline, line-through, or none.-->
+<p style="text-decoration: underline;">This text is underlined.</p>
+<p style="text-decoration: overline;">This text has an overline.</p>
+<p style="text-decoration: line-through;">This text has a line through it.</p>
+<p style="text-decoration: none;">This text has no decoration.</p>
+<p style="text-decoration: underline overline;">This text is underlined and has an overline.</p>
+<p style="text-decoration: line-through underline;">This text has a line through it and is underlined.</p>
+<p style="text-decoration: overline line-through;">This text has an overline and a line through it.</p>
+<p style="word-spacing: 10px;">This text has increased word spacing.</p>
+<p style="letter-spacing: 5px;">This text has increased letter spacing.</p>
+<p style="text-align: center;">This text is centered.</p>
+<p style="text-align: right;">This text is aligned to the right.</p>
+
+
+<!-- what is CSS units= they are the measurement units used to define the size of elements in CSS.  
+1. Absolute units (e.g., px, cm, mm) are fixed and do not change based on the context.
+2. Relative units (e.g., em, rem, %) are based on the parent element or the root element.
+3. The choice of unit depends on the desired behavior and design requirements. -->
+
+<p style="font-size: 16px;">This text has a font size of 16 pixels.</p>
+<p style="font-size: 1.5em;">This text has a font size of 1.5 em (relative to the parent element).</p>
+<p style="font-size: 120%;">This text has a font size of 120% (relative to the parent element).</p>
+<p style="font-size: 2rem;">This text has a font size of 2 rem (relative to the root element).</p>
+
+<!-Absolute and relative units in CSS: Absolute units are fixed and do not change based on the context,
+ while relative units are based on the parent element or the root element.-->
+<p style="font-size: 20px;">This text has a font size of 20 pixels (absolute unit).</p>
+<p style="font-size: 2em;">This text has a font size of 2 em (relative to the parent element).</p>
+<p style="font-size: 150%;">This text has a font size of 150% (relative to the parent element).</p>
+<p style="font-size: 3rem;">This text has a font size of 3 rem (relative to the root element).</p>  
+
+<!-- how ur css is seeing the html document?  CSS sees the HTML document as a box model where each element is represented 
+as a rectangular box with properties like width, height, margin, padding, and border .  -->
+</body>
+</html>

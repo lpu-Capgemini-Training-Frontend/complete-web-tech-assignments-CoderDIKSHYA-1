@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>weather ui</title>
+
+<!-- tailwind  used here by uisng CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- css  IS DIRECTLY USED HERE  BY USING LINK TAG-->
+<link rel="stylesheet" href="./Weather.css">
+</head>
+
+<body class="bg-gray-900 text-white p-6">
+
+<!-- main container -->
+<div class="max-w-6xl mx-auto">
+
+    <!-- heading -->
+    <h1 class="text-3xl text-center font-bold mb-6">
+        HOW'S THE SKY LOOKING TODAY?
+    </h1>
+
+    <!-- search -->
+    <div class="flex justify-center gap-2 mb-8">
+        <input type="text" placeholder="search for a place..."
+        class="p-2 rounded w-72 text-black">
+
+        <button class="bg-blue-500 px-4 py-2 rounded">
+            search
+        </button>
+    </div>
+
+    <!-- layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- left section - means to select the left section -->
+        <section class="md:col-span-2 space-y-6">
+
+            <!-- main weather card - gradient background -->
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 p-6 rounded-xl flex justify-between">
+
+                <div>
+                    <h2 class="text-xl font-semibold">Kolkata, West Bengal</h2>
+                    <p>monday, april 6, 2026</p>
+                </div>
+
+                <div class="text-5xl font-bold">
+                    ☀️ 20°C
+                </div>
+                <div>
+                °F
+                  Precipitation: 0%
+                  Humidity: 91%
+                  Wind: 8 km/h
+                </div>
+
+            </div>
+
+            <!-- stats - means to select the stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="bg-gray-800 p-4 rounded">
+                    <p>Feels like</p>
+                    <h3>17°</h3>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded">
+                    <p>Humidity</p>
+                    <h3>91%</h3>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded">
+                    <p>Wind</p>
+                    <h3>8 km/h</h3>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded">
+                    <p>Precipitation</p>
+                    <h3>0 mm</h3>
+                </div>
+
+            </div>
+
+            <!-- daily forecast - means to select the daily forecast -->
+            <div>
+
+                <h2 class="mb-3">Daily Forecast</h2>
+
+                <div class="flex gap-3 overflow-x-auto">
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>☁️ tue</p>
+                        <p>20° 14°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>☁️ wed</p>
+                        <p>21° 15°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>☀️ thu</p>
+                        <p>24° 14°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌥️ fri</p>
+                        <p>23° 13°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌧️ sat</p>
+                        <p>21° 15°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌧️ sun</p>
+                        <p>25° 16°</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌦️ mon</p>
+                        <p>24° 15°</p>
+                    </div>
+
+                     <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌦️ tue</p>
+                        <p>23° 13°</p>
+                    </div>
+
+                     <div class="bg-gray-800 p-3 rounded text-center">
+                        <p>🌦️ wed</p>
+                        <p>22° 15°</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- right section - means to select the right section -->
+        <section class="bg-gray-800 p-4 rounded-xl">
+
+            <h2 class="mb-4">Hourly Forecast</h2>
+
+            <div class="space-y-3">
+
+                <div class="flex justify-between">
+                    <span>☁️ 3 pm</span>
+                    <span>20°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>☁️ 4 pm</span>
+                    <span>20°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>☀️ 5 pm</span>
+                    <span>20°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>🌥️ 6 pm</span>
+                    <span>18°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>☁️ 7 pm</span>
+                    <span>18°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>🌧️ 8 pm</span>
+                    <span>18°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>🌧️ 9 pm</span>
+                    <span>17°</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>☁️ 10 pm</span>
+                    <span>17°</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>

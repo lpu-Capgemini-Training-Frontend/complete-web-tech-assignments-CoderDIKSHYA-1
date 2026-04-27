@@ -1,0 +1,11 @@
+<h2>Login</h2>
+
+<select [(ngModel)]="role">
+  <option value="">Select</option>
+  <option value="m">Manager</option>
+  <option value="t">Trainee</option>
+</select>
+
+<br><br>
+
+<button  [disabled]="!role" (click)="enter()">Enter</button>
