@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibling Selector</title>
+    <link rel="stylesheet" href="/CSS/siblingSelector.css">
+</head>
+<body>
+
+<div id ="parent">
+<p id="sibling01"> This is Sibling 1</p>
+<p id="sibling02"> This is Sibling 2</p>
+</div>
+
+
+<div id ="parent">
+<p id="sibling03"> This is Sibling 3</p>
+<p id="sibling04"> This is Sibling 4</p>
+<p id="sibling05"> This is Sibling 5</p>
+<p id="sibling06"> This is Sibling 6</p>
+</div>
+
+</body>
+</html>
+<!--
+========================
+SIBLING SELECTORS NOTES
+========================    
+🔹 WHAT IS A SIBLING SELECTOR?
+A sibling selector in CSS is used to select elements that are siblings of a specified element. There are two types of sibling selectors:
+1. Adjacent sibling selector (+): This selector targets the immediate next sibling of a specified element. For example, if you have an HTML structure like this:
+<div>
+  <p>First paragraph</p>
+  <p>Second paragraph</p>   
+</div>
+You can use the adjacent sibling selector to target the second paragraph like this:
+p + p {
+  color: red;
+}
+This will make the text of the second paragraph red, as it is the immediate sibling of the first paragraph.
+2. General sibling selector (~): This selector targets all siblings of a specified element that come after it, regardless of their position. For example, if you have an HTML structure like this:
+<div>
+  <p>First paragraph</p>
+  <p>Second paragraph</p>
+  <p>Third paragraph</p>
+</div>
+You can use the general sibling selector to target both the second and third paragraphs like this:
+
+p ~ p {
+  color: blue;
+}
+This will make the text of both the second and third paragraphs blue, as they are siblings of the first paragraph and come after it in the document.
+In summary, sibling selectors are powerful tools in CSS that allow you to target and style elements based
+
+on their relationship to other elements in the DOM, specifically their sibling relationships. The adjacent sibling selector targets the immediate next sibling, while the general sibling selector targets all siblings that come after a specified element.
+-->

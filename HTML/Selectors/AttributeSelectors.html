@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attribute Selectors</title>
+
+<style>
+
+/* Attribute Selector: selects input elements with type="text" */
+input[type="text"] {
+    background-color: #f0f0f0;   /* light grey background */
+    color: #8f2222;              /* dark reddish text */
+    padding: 10px;               /* space inside input */
+    border: 1px solid #ccc;      /* light grey border */
+    border-radius: 4px;          /* rounded corners */
+    margin: 10px 0;              /* spacing between inputs */
+    display: block;              /* each input on new line */
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Attribute Selectors</h1>
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name">
+
+<label for="email">Email:</label>
+<input type="text" id="email" name="email" placeholder="Enter your email">
+
+</body>
+</html>

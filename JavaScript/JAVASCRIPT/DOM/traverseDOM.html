@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .active{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h2>DOM Traversal Demo</h2>
+
+<div class="container" id="parent">
+    <p class="child">First</p>
+    <p class="child">Second</p>
+    <p class="child">Third</p>
+    Text Node
+</div>
+
+<button onclick="traverseDOM()">Run Traversal</button>
+
+<script>
+
+// DOM Traversal function - traversing the DOM using different methods 
+function traverseDOM(){
+
+    let parent = document.getElementById("box"); // getting the parent element from the DOM 
+    let first = parent.firstElementChild; // getting the first child element from the parent element
+    let second = first.nextElementSibling; // getting the next sibling element from the first child element
+
+// using different methods to traverse the DOM 
+    console.log("children:", parent.children); // getting all the child elements from the parent element
+    console.log("childElementCount:", parent.childElementCount); // getting the number of child elements from the parent element
+
+    console.log("childNodes:", parent.childNodes); // getting all the child nodes from the parent element
+
+    console.log("firstChild:", parent.firstChild); //getting the first child node from the parent element
+    console.log("firstElementChild:", parent.firstElementChild); // getting the number of child elements from the parent element
+
+    console.log("lastChild:", parent.lastChild); //getting the last child node from the parent element
+    console.log("lastElementChild:", parent.lastElementChild); //getting the last child element from the parent element.
+
+    console.log("parentNode:", first.parentNode); // getting the parent node from the first child element.
+    console.log("parentElement:", first.parentElement); //getting the parent element from the first child element
+
+    console.log("nextSibling:", first.nextSibling); // getting the next sibling node from the first child element
+    console.log("nextElementSibling:", first.nextElementSibling); // getting the next sibling element from the first child element
+
+    console.log("previousSibling:", second.previousSibling); // getting the previous sibling node from the second child element
+    console.log("previousElementSibling:", second.previousElementSibling); // getting the previous sibling element from the second child element
+
+    console.log("classList:", first.classList); // getting the class list from the first child element
+    first.classList.add("active"); // adding the class to the first child element
+
+    console.log("closest:", first.closest(".container")); // getting the closest element from the first child element
+
+    console.log("matches:", first.matches(".item")); // checking if the first child element matches the class name
+
+    console.log("contains:", parent.contains(first)); // checking if the parent element contains the first child element
+
+    console.log("nodeName:", first.nodeName); // getting the node name from the first child element
+    console.log("nodeType:", first.nodeType); // getting the node type from the first child element
+
+    parent.normalize(); // normalizing the parent element
+}
+
+</script>
+
+</body>
+</html>

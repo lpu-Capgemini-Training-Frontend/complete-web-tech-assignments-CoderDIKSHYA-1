@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+
+    <!-- 
+    =========================
+    HTML FORMS NOTES
+    =========================
+
+    🔹 <form>
+    → Defines a form used to collect user input and send it to a server.
+    🔹 action
+    → Specifies the URL where the form data will be sent after submission.
+    🔹 method
+    → Defines how data is sent (GET = visible in URL, POST = secure & hidden).
+    🔹 <label>
+    → Provides a caption for input fields and improves accessibility.
+    🔹 <input>
+    → Used to take user input in different formats like text, email, number, etc.
+    🔹 required
+    → Makes a field mandatory before submitting the form.
+    🔹 <select>
+    → Creates a dropdown list for selecting one option.
+    🔹 <option>
+    → Defines each selectable item inside a dropdown.
+    🔹 <textarea>
+    → Allows users to enter multi-line text input.
+    🔹 submit button
+    → Sends the form data to the server when clicked.
+
+    🔹 PASSWORD
+    → Used to take secure input where characters are hidden.
+
+    🔹 CHECKBOX
+    → Allows users to select multiple options at the same time.
+
+    🔹 RADIO BUTTON
+    → Allows only one selection among multiple options.
+
+    -->
+</head>
+
+<body>
+
+    <h2>HTML Forms</h2>
+
+    <!-- FORM START -->
+    <form action="/submit" method="post">
+
+        <!-- NAME -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- EMAIL -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- PASSWORD -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- AGE -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0"><br><br>
+
+        <!-- GENDER (RADIO BUTTONS) -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- SUBJECTS (CHECKBOXES) -->
+        <label>Subjects:</label><br>
+
+        <input type="checkbox" id="java" name="subjects" value="java">
+        <label for="java">Java</label><br>
+
+        <input type="checkbox" id="python" name="subjects" value="python">
+        <label for="python">Python</label><br>
+
+        <input type="checkbox" id="web" name="subjects" value="web">
+        <label for="web">Web Development</label><br><br>
+
+        <!-- SUBSCRIBE CHECKBOX -->
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Subscribe to newsletter</label><br><br>
+
+        <!-- MESSAGE -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <!-- SUBMIT -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+#parent > #sibling01 ~ #sibling02 {
+    background-color: rgb(34, 182, 47);
+  color: rgb(112, 6, 6);
+}
+
+/* Selects only the next paragraph after sibling01 */
+#parent > #sibling01 + p {
+    color: red;
+    font-weight: bold;
+}
+
+/* Selects only sibling04 (next after sibling03) */
+#parent > #sibling03 + p {
+    background-color: yellow;
+}
+
+
+/* Selects all paragraphs after sibling03 */
+#parent > #sibling03 ~ p {
+    color: blue;
+}
+
+/* Selects all siblings after sibling01 */
+#parent > #sibling01 ~ p {
+    background-color: lightgreen;
+}

@@ -1,0 +1,7 @@
+#para1, .myArticle1, .myArticle2, .myArticle3, div, span {
+    background-color: rgb(8, 96, 118);
+    color: rgb(244, 244, 250);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}

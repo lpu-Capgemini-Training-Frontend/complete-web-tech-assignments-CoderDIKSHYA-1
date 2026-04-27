@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Selectors</title>
+    <link rel="stylesheet" href="/CSS/groupSelectors.css">
+</head>
+<body>
+
+    <h4>Grouping CSS Selectors</h4>
+
+    <p id ="para1">This is a paragraph.</p>
+    <article class="myArticle1">This is an article.</article>
+    <article class="myArticle2">This is another article.</article>
+    <article class="myArticle3">This is yet another article.</article>
+    <div>This is another paragraph.</div>
+    <span>This is yet another paragraph.</span>
+
+</body>
+</html>
+
+    <!--
+    =========================
+    GROUPING SELECTORS NOTES
+    =========================
+
+    🔹 WHAT IS A GROUPING SELECTOR?
+    A grouping selector allows you to apply the same styles to multiple selectors at once.
+
+    --------------------------------------------------
+
+    🔹 SYNTAX
+    selector1, selector2, selector3 {
+        propertyName: value;
+        propertyName: value;
+    }
+
+    --------------------------------------------------
+
+    🔹 EXAMPLE
+    p, h1, .myClass {
+        color: red;
+        font-size: 20px;
+    }
+
+    In this example, the styles defined within the curly braces will be applied to all <p> elements, <h1> elements, and any element with the class "myClass".       

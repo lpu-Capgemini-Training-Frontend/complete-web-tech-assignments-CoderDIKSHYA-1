@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selectors</title>
+    <link rel="stylesheet" href="/CSS/combinatorSelector.css">
+</head>
+<body>
+
+    <h4>Combinator CSS Selectors</h4>
+<div id ="parentDiv01">
+   <p id="para1">This is a paragraph  </p>
+   <p id="para2">This is another paragraph </p>
+   <p id="para3">This is yet another paragraph </p>
+   <p id="para4">This is yet one more another paragraph </p>
+</div>
+
+<div id ="parentDiv02">
+   <p id="para1">This is a paragraph  </p>
+   <p id="para2">This is another paragraph </p>
+   <p id="para3">This is yet another paragraph </p>
+   <p id="para4">This is yet one more another paragraph </p>
+</div>
+</body>
+</html>
+
+    <!--
+    =========================
+    COMBINATOR SELECTORS NOTES
+    =========================
+
+    🔹 WHAT IS A COMBINATOR SELECTOR?
+    A combinator selector allows you to apply styles based on the relationship between elements.
+    more points to add here
+    1. Descendant combinator (space): Selects elements that are descendants of a specified element.
+    Example: p span { ... } - This will select all <span> elements that are descendants of <p> elements.
+    add three points for it 
+    1. It can select elements at any level of nesting within the specified element.
+    2. It is represented by a space between the two selectors.
+    3. It is the most common combinator selector used in CSS.
+
+    2. Child combinator (>): Selects elements that are direct children of a specified element.
+    Example: div > p { ... } - This will select all <p> elements that are direct children of <div> elements.
+    add three points for it
+    1. It only selects elements that are immediate children of the specified element.
+    2. It is represented by the greater-than symbol (>) between the two selectors.
+    3. It is useful for targeting specific elements without affecting nested elements.
+
+    3. Adjacent sibling combinator (+): Selects elements that are immediately adjacent siblings of a specified element.
+    Example: h1 + p { ... } - This will select the first <p> element that is immediately following an <h1> element.
+    add three points for it
+    1. It only selects the first sibling element that immediately follows the specified element.    
+    2. It is represented by the plus symbol (+) between the two selectors.
+    3. It is useful for styling elements that are directly related to a specific element.
+
+    4. General sibling combinator (~): Selects elements that are siblings of a specified element, regardless of their position.
+    Example: h1 ~ p { ... } - This will select all <p> elements that are siblings of an <h1> element, regardless of their position.
+    add three points for it
+    1. It selects all sibling elements that follow the specified element, regardless of their position
+    2. It is represented by the tilde symbol (~) between the two selectors.
+    3. It is useful for styling elements that are related to a specific element, but not necessarily adjacent to it.
+
+
+
+    --------------------------------------------------
+
+    🔹 SYNTAX
+    selector1 selector2 {
+        propertyName: value;
+        propertyName: value;
+    }
+
+    --------------------------------------------------
+
+    🔹 EXAMPLE
+    p span {
+        color: red;
+        font-size: 20px;
+    }
+
+    In this example, the styles defined within the curly braces will be applied to all <span> elements that are descendants of <p> elements.

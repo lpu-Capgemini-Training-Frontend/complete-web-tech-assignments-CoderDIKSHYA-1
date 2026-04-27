@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Post</title>
+    <style>
+        #likebtn,#dislikebtn{
+            border-radius: 20%;
+            font-size :30px;
+        } 
+        #btn{
+            margin: 2px;
+            height: 100px;
+            width: 200px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+        } 
+    </style>
+</head>
+<body>
+    <!-- Create a post wehre user could be able to like the post and you could be able to see the like that is increasing-->
+     <h1 id="">My Post</h1>
+     <img src="https://cdn.pixabay.com/photo/2026/02/11/15/36/dpaolaphoto-ipanema-10117989_1280.jpg" alt="" height="400px" width="300px"><br>
+     <div id="btn">
+     <button id="likebtn" onclick="increaseLike()">❤️</button>
+     <button id="dislikebtn" onclick="increaseDisLike()">👎</button>
+     </div>
+     <script src="./post.js"></script>
+</body>
+</html>

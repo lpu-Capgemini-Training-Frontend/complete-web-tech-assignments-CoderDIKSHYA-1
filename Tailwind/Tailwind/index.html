@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+  #container{
+    height:60px;
+    width:60px;
+    background-color:pink;
+  }
+</head>
+
+
+<body>
+
+<h1 class="text-3xl font-bold underline">
+  Hello world!
+</h1>
+
+<div id="container" class="bg-blue-500 text-white p-4 mt-4">
+  This is a container using Tailwind
+</div>
+
+<div class="bg-gradient-to-r from-green-400 to-blue-500 text-white p-4 mt-4">
+  This is a div with a gradient background.
+</div>
+
+</body>
+</html>
+
+<!-- Tailwind CSS is a utility-first CSS framework that allows you to build custom designs directly in your HTML. 
+In this example, we have included the Tailwind CSS library via a CDN link in the head of the document.
+ We then use Tailwind's utility classes to style our elements, such as setting text size,
+  font weight, background color, padding, and margins. The first div has a solid blue background,
+   while the second div has a gradient background that transitions from green to blue. 
+   
+   Advantages of using Tailwind CSS: 
+   1. Rapid Development: Tailwind's utility classes allow for quick styling without writing custom CSS.
+   2. Consistency: The utility-first approach ensures a consistent design system across the project.
+   3. Responsiveness: Built-in responsive utilities make it easy to create mobile-friendly designs.
+   4. Customization: Tailwind is highly customizable, allowing you to define your own theme and extend its functionality. 
+   
+   
+   Disadvantages of using Tailwind CSS:
+   1. Learning Curve: It may take time to become proficient with all the utility classes.
+   2. HTML Bloat: The extensive use of utility classes can lead to verbose HTML markup.
+   3. Debugging: Debugging styles can be more challenging compared to traditional CSS.
+   4. Overriding Styles: It can be difficult to override existing styles when needed. 
+   5.We always have to use Inline CSS for the styling wich makes it difficult to -->

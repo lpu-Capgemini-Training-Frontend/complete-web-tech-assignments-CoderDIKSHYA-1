@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display data in the tabular format</title>
+</head>
+<body>
+    <input onkeydown="if(event.key==='Enter'){search()}" id="search" type="search">
+    <table style="border-radius: 10px;" border="1" id="table">
+        <caption style="font-size: 30px;font-weight: bold;">
+            Category Details
+        </caption>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Slug</th>
+            <th>Image</th>
+            <th>CreatedAt</th>
+        </tr>
+    </table>
+    <script src="./index.js"></script>
+</body>
+</html>

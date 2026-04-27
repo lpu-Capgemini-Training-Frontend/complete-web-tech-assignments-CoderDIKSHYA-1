@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipkart Layout</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+#parentcontainer{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+#parentcontainer > #childcontainer01{
+    width:100%;
+    padding:15px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background:#f5f5f5;
+}
+
+/* TOP ROW */
+#childcontainer01 > #for-adding-logo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LEFT SIDE */
+#for-adding-logo > div:first-child{
+    display:flex;
+    gap:15px;
+}
+
+/* ALL PILLS */
+#for-adding-logo > div:first-child > div{
+    padding:8px 18px;
+    border-radius:20px;
+    background:#e0e0e0;
+    display:flex;
+    align-items:center;
+    font-weight:600;
+}
+
+/* FLIPKART SPECIAL */
+#flipkartlogo{
+    background:#ffe500;
+}
+
+/* LOCATION */
+#for-adding-logo > #location{
+    font-size:14px;
+}
+
+/* SEARCH ROW */
+#childcontainer01 > div:last-child{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* SEARCH BAR */
+#childcontainer01 > div:last-child > input{
+    flex:1;
+    padding:12px 20px;
+    border-radius:10px;
+    border:2px solid #2874f0;
+    outline:none;
+    font-size:16px;
+}
+
+/* RIGHT MENU */
+#childcontainer01 > div:last-child > div{
+    display:flex;
+    gap:25px;
+}
+
+/* BOTTOM */
+#parentcontainer > #childcontainer02{
+    display:flex;
+    height:300px;
+}
+
+/* LOWER BLOCKS */
+#childcontainer02 > div{
+    flex:1;
+}
+
+#childcontainer02 > div:nth-child(1){
+    background:greenyellow;
+}
+
+#childcontainer02 > div:nth-child(2){
+    background:cyan;
+}
+
+#childcontainer02 > div:nth-child(3){
+    background:palegoldenrod;
+}
+
+#childcontainer02 > div:nth-child(4){
+    background:orange;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="parentcontainer">
+
+    <div id="childcontainer01">
+
+        <div id="for-adding-logo">
+
+            <div>
+                <div id="flipkartlogo">Flipkart</div>
+                <div>Minutes</div>
+                <div>Travel</div>
+                <div>Grocery</div>
+            </div>
+
+            <div id="location">
+                📍 500004 <span style="color:blue;">Select delivery location</span>
+            </div>
+
+        </div>
+
+        <div>
+            <input placeholder="Search for Products, Brands and More">
+            <div>
+                <div>👤 LOGIN</div>
+                <div>More ⌄</div>
+                <div>🛒 Cart</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="childcontainer02">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</div>
+
+</body>
+</html>

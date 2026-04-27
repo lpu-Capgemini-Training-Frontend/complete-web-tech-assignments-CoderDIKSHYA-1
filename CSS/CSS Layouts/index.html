@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display properties flex and grid</title>
+
+    <!-- CSS for flexbox layout -->
+    <!-- This CSS is for the flexbox layout 
+    in Display Flex we have three major properties:
+   01.justify-content: it is used to align the items horizontally in the container.
+   it has 6 major values:
+   1. flex-start: it is the default value, it aligns the items to the left of the container.
+   2. flex-end: it aligns the items to the right of the container.
+    3. center: it aligns the items to the center of the container.
+    4. space-between: it distributes the items evenly in the container, with the first item at the start and the last item at the end.
+    5. space-around: it distributes the items evenly in the container, with equal space around them.
+    6. space-evenly: it distributes the items evenly in the container, with equal
+    space between them.
+
+    02.Align items: it is used to align the items vertically in the container.
+    It has 5 major values:
+    1. stretch: it is the default value, it stretches the items to fill the container.
+    2. flex-start: it aligns the items to the top of the container.
+    3. flex-end: it aligns the items to the bottom of the container.
+    4. center: it aligns the items to the center of the container.
+    5. baseline: it aligns the items to the baseline of the container.
+
+    03.Flex-direction: it is used to specify the direction of the items in the container.
+    It has 4 major values:
+    1. row: it is the default value, it arranges the items in a
+    horizontal line.
+    2. row-reverse: it arranges the items in a horizontal line, but in reverse order.
+    3. column: it arranges the items in a vertical line.
+    4. column-reverse: it arranges the items in a vertical line, but in reverse order.
+    flex-direction is the default value, it arranges the items in a horizontal line.
+    what are values of flex-direction?
+    1. row is the default value, it arranges the items in a horizontal line
+    2. row-reverse is the default value, it arranges the items in a horizontal line, but in reverse order.
+     3. column is the default value, it arranges the items in a vertical line.
+     4. column-reverse is the default value, it arranges the items in a vertical line, but in reverse order.
+
+     
+
+
+    5. flex-direction row is the default value, it arranges the items in a horizontal line. 
+    6. flex-direction column is the default value, it arranges the items in a vertical line.
+
+
+    why we using flex in css?
+    1. Flexbox is a powerful layout module in CSS that allows for flexible and responsive design.
+    2. It provides an efficient way to align and distribute space among items in a container, even when their size is unknown or dynamic.
+    3. Flexbox makes it easier to create complex layouts without the need for float or positioning.     
+    -->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #parentcontainer {
+            width: 100%;
+            height: 725px;
+            background-color: pink;
+
+            display: flex;
+
+            /* FLEX-DIRECTION */
+            flex-direction: row; 
+            /* try: row-reverse / column / column-reverse */
+
+            /* ALIGN-ITEMS (vertical) */
+            align-items: flex-end;
+            /* try: flex-start / center / baseline / stretch */
+
+            /* JUSTIFY-CONTENT (horizontal) */
+
+            /* 1. flex-start (default) */
+            /* justify-content: flex-start; */
+
+            /* 2. flex-end */
+            /* justify-content: flex-end; */
+
+            /* 3. center */
+            /* justify-content: center; */
+
+            /* 4. space-between */
+            justify-content: space-between;
+
+            /* 5. space-around */
+            /* justify-content: space-around; */
+
+            /* 6. space-evenly */
+            /* justify-content: space-evenly; */
+        }
+
+
+
+        /* first child */
+        #parentcontainer > #childcontainer {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+        }
+
+        /* remaining children */
+        .childcont {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="parentcontainer">
+
+        <div id="childcontainer"></div>
+
+        <div class="childcont"></div>
+        <div class="childcont"></div>
+        <div class="childcont"></div>
+
+
+
+    </div>
+
+</body>
+</html>
