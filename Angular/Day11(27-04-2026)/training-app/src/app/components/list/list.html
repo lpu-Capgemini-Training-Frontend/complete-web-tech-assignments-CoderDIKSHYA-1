@@ -1,0 +1,16 @@
+<h2>Trainings</h2>
+
+<div class="top-bar">
+  <button class="add-btn" *ngIf="role=='m'" (click)="goToAdd()">
+    + Add Training
+  </button>
+</div>
+
+<div class="card" *ngFor="let t of trainings">
+  <h3>{{t.t}}</h3>
+
+  <p><strong>Topic:</strong> {{t.tp}}</p>
+  <p><strong>Trainer:</strong> {{t.tr}}</p>
+  <p><strong>Venue:</strong> {{t.v}}</p>
+  <p><strong>Date:</strong> {{t.sd}}</p>
+</div>

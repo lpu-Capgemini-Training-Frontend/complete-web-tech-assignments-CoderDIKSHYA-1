@@ -1,0 +1,43 @@
+<div class="wrapper">
+
+  <h2>Customer List</h2>
+
+
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search by name..."
+      [(ngModel)]="searchText"
+      (input)="onSearchChange()"
+    />
+  </div>
+
+ 
+  <div class="card-container">
+    @for(customer of paginatedCustomers; track customer.id){
+      <div class="card">
+        <h3>{{ customer.name }}</h3>
+        <p><span>ID:</span> {{ customer.id }}</p>
+        <p><span>Email:</span> {{ customer.email }}</p>
+        <p><span>Phone:</span> {{ customer.phone }}</p>
+        <p><span>Date of Birth:</span> {{ customer.dateOfBirth | date }}</p>
+        <p><span>Gender:</span> {{ customer.gender }}</p>
+        <p><span>Address:</span> {{ customer.address }}</p>
+      </div>
+    }
+  </div>
+
+ 
+  <div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">
+    Previous
+  </button>
+
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+
+  <button (click)="nextPage()" [disabled]="currentPage >= totalPages">
+    Next
+  </button>
+</div>
+
+</div>

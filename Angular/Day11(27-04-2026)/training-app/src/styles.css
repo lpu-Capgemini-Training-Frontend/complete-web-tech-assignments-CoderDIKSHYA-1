@@ -1,0 +1,97 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FAF3ED; /* light beige */
+  color: #4B2E2B; /* dark coffee */
+}
+
+
+h1 {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  background-color: #6F4E37; /* coffee brown */
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #4B2E2B;
+}
+
+
+form {
+  background-color: #F5E6DA; /* nude beige */
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #D2B48C;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #6F4E37;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #6F4E37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #4B2E2B;
+}
+
+button:disabled {
+  background-color: #cbb8a9;
+  cursor: not-allowed;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #F5E6DA;
+  margin: 12px auto;
+  padding: 12px;
+  width: 80%;
+  border-radius: 8px;
+  border-left: 6px solid #6F4E37;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button.add-btn {
+  width: auto;
+  margin: 10px 20px;
+  padding: 8px 15px;
+}
+
+
+div {
+  font-size: 12px;
+  color: #8B0000;
+}

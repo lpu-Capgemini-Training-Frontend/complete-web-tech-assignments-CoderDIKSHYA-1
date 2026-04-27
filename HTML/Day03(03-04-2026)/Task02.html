@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body style="font-family: Arial;">
+
+<div style="width:80%; margin:auto;">
+
+    <center>
+        <h3>Please complete all the information below:</h3>
+    </center>
+
+    <fieldset style="padding:20px;">
+        <legend style="font-weight:bold;">Sign Up Here</legend>
+
+        <!-- Name Label -->
+        <div style="margin-bottom:10px;">
+            <label>Name:</label>
+        </div>
+
+        <!-- First + Last Name -->
+        <div style="display:flex; gap:20px; margin-bottom:15px;">
+            <div style="width:45%;">
+                <input type="text" name="first_name" placeholder="First Name"
+                       style="width:100%; padding:5px;">
+            </div>
+
+            <div style="width:45%;">
+                <input type="text" name="last_name" placeholder="Last Name"
+                       style="width:100%; padding:5px;">
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="margin-bottom:15px;">
+            <label>Contact:</label><br>
+            <input type="text" name="contact" placeholder="9810000000"
+                   style="width:100%; padding:5px;">
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom:15px;">
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="abc@gmail.com"
+                   style="width:100%; padding:5px;">
+        </div>
+
+        <!-- Password -->
+        <div style="margin-bottom:15px;">
+            <label>Password:</label><br>
+            <input type="password" name="password" placeholder="Enter Password"
+                   style="width:100%; padding:5px;">
+        </div>
+
+        <!-- Profile -->
+        <div style="margin-bottom:15px;">
+            <label>Profile:</label><br>
+            <input type="file" name="profile">
+        </div>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit"
+               style="padding:5px 10px;">
+
+    </fieldset>
+
+</div>
+
+</body>
+</html>
